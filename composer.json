@@ -1,0 +1,17 @@
+{
+    "name": "facu/crud_php_listas",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "FacuRamallo",
+            "email": "framallo.ing@gmail.com"
+        }
+    ]
+}
