@@ -1,6 +1,7 @@
 <?php
 namespace App\Core;
 
+use App\models\ListElement;
 
 class SQLListRepo implements IListRepo {
     private $table = 'listelements'; 
@@ -15,5 +16,9 @@ class SQLListRepo implements IListRepo {
         $result = $query->fetchAll();
         return($result);
 
+    }
+
+    function save ($txtContent){
+        $this->conexion->query("INSERT INTO `{$this->table}` (`txtContent`) VALUES ('{$txtContent}')");
     }
 }

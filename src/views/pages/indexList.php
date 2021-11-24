@@ -10,7 +10,7 @@
 <body>
     <ul class="list-group list-group-flush">
         <?php 
-
+        require_once __DIR__ . '/../components/inputForm.php';
         foreach ($listElements as $li) {
         
             require __DIR__ . '/../components/liElement.php'; 

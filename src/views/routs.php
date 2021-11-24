@@ -6,6 +6,10 @@ $uri = $_SERVER["REQUEST_URI"];
 
 $controller = new LEController();
 
+if($_POST){
+    $controller->store($_POST);
+}
+
 if ($uri == '/list' || $uri == '/'){
      
     $controller->index();

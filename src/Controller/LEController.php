@@ -14,5 +14,8 @@ class LEController {
         require_once __DIR__ . '/../views/pages/create.php';
     }
 
-
+    public function store($request){
+        $LiElToSave = new ListElement($request);
+        echo $LiElToSave->save();
+    }
 }

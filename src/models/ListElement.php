@@ -12,7 +12,7 @@ class ListElement
     public function __construct($data = null)
     {
         if ($data) {
-        $this->id = $data['id'];
+        $this->id = isset($data['id']) ? $data['id'] : null;
         $this->txtContent = $data['txtContent'];
         }
         $this->db = new SQLListRepo();
@@ -25,4 +25,9 @@ class ListElement
         }
         return $list;
     }
+
+    public function save(){
+        $this->db->save($this->txtContent);
+    }
+
 }
