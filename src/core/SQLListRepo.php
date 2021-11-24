@@ -21,4 +21,8 @@ class SQLListRepo implements IListRepo {
     function save ($txtContent){
         $this->conexion->query("INSERT INTO `{$this->table}` (`txtContent`) VALUES ('{$txtContent}')");
     }
+
+    function delete($id){
+        $this->conexion->query("DELETE FROM `{$this->table}` WHERE `{$this->table}`.`id` = {$id}");
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Core\SQLListRepo;
 use App\models\ListElement;
 
 class LEController {
@@ -18,4 +19,11 @@ class LEController {
         $LiElToSave = new ListElement($request);
         echo $LiElToSave->save();
     }
+
+    function delete($request){
+        $idToDelete = new SQLListRepo();
+        $idToDelete->delete($request['id']);
+        
+    }
+
 }
